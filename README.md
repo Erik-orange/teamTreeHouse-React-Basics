@@ -26,6 +26,7 @@ render() {
 
 ### Components
 Function Components **+** `props`
+
 Class Components **+** `state`
 
 
