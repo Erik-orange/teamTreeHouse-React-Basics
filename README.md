@@ -7,7 +7,7 @@ ___
 Function Component:
 ```jsx
 return (
-//  JSX
+  //  JSX
 );
 ```
 
@@ -15,7 +15,7 @@ Class Component:
 ```jsx
 render() {
   return (
-  // JSX
+    // JSX
   );
 }
 ```
@@ -138,7 +138,7 @@ React's `setState()` method can also take a callback function as an argument ins
 
 ```jsx
 eventHandlerFunc = () => {
-  this.setState( prevState => {
+  this.setState( prevState => {     // The 'prevState' parameter can be named anything you'd like
     return {
       statePropName: prevState.statePropName + 1
     };
