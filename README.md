@@ -130,10 +130,38 @@ class MyComponent extends React.Component {
 }
 ```
 
+### Change state Based On Previous state
+When updating `state` based on a previous `state`, do not rely on `this.state.statePropName` to calculate the next `state` because it may not be accurate.
 
+**To Fix This Issue:**
+React's `setState()` method can also take a callback function as an argument instead of an object. This callback function can produce `state` based on a previous `state` in a more reliable form.
 
+```jsx
+eventHandlerFunc = () => {
+  this.setState( prevState => {
+    return {
+      statePropName: prevState.statePropName + 1
+    };
+  });
+}
+```
 
+* The callback function (an arrow function) receives the previous `state` as it's first argument and the `props` (at the time the update is applied as an optional second argument).
 
+* The only thing that changes over time in React is `state`. 
+A change in `state` results in changes to the UI.
+Changes to the UI result in changes to the data.
+
+### Remove Items From state
+To remove items from a `state` we'll initialize a `state` in the `<App />` component, then create and wire up an event handler that removes an item when an event is triggered, such as a click event.
+
+The component responsible for rendering the desired component will own and maintain that component's `state`. In this case, it's the `<App />` component.
+
+That `state` will be then be passed down and available to the component as well as all children of `<App />` component via `props`.
+
+The `<App />` component **must** be a stateful component for all this to work!
+
+To remove items from `state` wrie the removal function inside the parent component, our example `<App />`, and use the `setState()` method to update the `state` based on `prevState` with the `filter()` method.
 
 
 
