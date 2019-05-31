@@ -6,7 +6,7 @@ ___
 
 * Use curly brackets, `{ }`, when setting numeric values in `props`.
 ```jsx
-Example
+// Example
 score={23}
 ```
 
