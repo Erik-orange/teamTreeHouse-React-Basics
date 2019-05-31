@@ -2,6 +2,14 @@
 
 ___
 
+* Use double quotes, `" "`, when writing `props` to mirror HTML attributes.
+
+* Use curly brackets, `{ }`, when setting numeric values in `props`.
+ex.
+```jsx
+score={23}
+```
+
 * React components return React elements.
 
 Function Component:
