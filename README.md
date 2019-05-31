@@ -72,3 +72,54 @@ class Counter extends React.Component {
 
 * `state` is **never** modified directly! The only way React allows you to update a component's state is by using it's built-in `setState()` method. This is done inside the event handler functions.
 
+
+### Binding the thisContext In React
+When you create a class component that extends from `React.Component`, any custom methods you create are not bound to the class component you just created. You must bind custom methods so that `this` refers to your newly created class component.
+
+There are several ways to accomplish this task:
+
+**1)** Calling the `bind()` method in the `render()` method
+```jsx
+eventHandlerFunc() {
+  this.setState( {
+    statePropName: this.state.statePropName + 1
+  });
+}
+
+<button onClick={ this.eventHandlerFunc.bind(this) }>CLICK ME</button>
+```
+
+**2)** Passing arrow functions to the event (e.g. `onClick={}`) in the component (e.g. button)
+```jsx
+eventHandlerFunc() {
+  this.setState( {
+    statePropName: this.state.statePropName + 1
+  });
+}
+
+// Uses lexical-this binding
+<button onClick={ () => this.eventHandlerFunc() }>CLICK ME</button>
+```
+
+**3)** Define the event handler function as an arrow function [PREFERRED METHOD]
+```jsx
+eventHandlerFunc = () => {
+  this.setState( {
+    statePropName: this.state.statePropName + 1
+  });
+}
+
+<button onClick={ this.eventHandlerFunc }>CLICK ME</button>
+```
+
+
+
+
+
+
+
+
+
+
+
+
