@@ -80,36 +80,54 @@ There are several ways to accomplish this task:
 
 **1)** Calling the `bind()` method in the `render()` method
 ```jsx
-eventHandlerFunc() {
-  this.setState( {
-    statePropName: this.state.statePropName + 1
-  });
+class MyComponent extends React.Component {
+  eventHandlerFunc() {
+    this.setState( {
+      statePropName: this.state.statePropName + 1
+    });
+  }
+  
+  render() {
+    return (
+      <button onClick={ this.eventHandlerFunc.bind(this) }>CLICK ME</button>
+    );
+  }
 }
-
-<button onClick={ this.eventHandlerFunc.bind(this) }>CLICK ME</button>
 ```
 
 **2)** Passing arrow functions to the event (e.g. `onClick={}`) in the component (e.g. button)
 ```jsx
-eventHandlerFunc() {
-  this.setState( {
-    statePropName: this.state.statePropName + 1
-  });
+class MyComponent extends React.Component {
+  eventHandlerFunc() {
+    this.setState( {
+      statePropName: this.state.statePropName + 1
+    });
+  }
+  
+  render() {
+    return (
+      // Uses lexical-this binding
+      <button onClick={ () => this.eventHandlerFunc() }>CLICK ME</button>
+    );
+  }
 }
-
-// Uses lexical-this binding
-<button onClick={ () => this.eventHandlerFunc() }>CLICK ME</button>
 ```
 
-**3)** Define the event handler function as an arrow function [PREFERRED METHOD]
+**3)** Define the event handler function as an arrow function **[PREFERRED METHOD]**
 ```jsx
-eventHandlerFunc = () => {
-  this.setState( {
-    statePropName: this.state.statePropName + 1
-  });
+class MyComponent extends React.Component {
+  eventHandlerFunc() {
+    this.setState( {
+      statePropName: this.state.statePropName + 1
+    });
+  }
+  
+  render() {
+    return (
+      <button onClick={ this.eventHandlerFunc }>CLICK ME</button>
+    );
+  }
 }
-
-<button onClick={ this.eventHandlerFunc }>CLICK ME</button>
 ```
 
 
