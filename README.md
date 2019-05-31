@@ -61,6 +61,14 @@ class Counter extends React.Component {
 }  
 ```
 
+### Update A Component's state
+1. Write an event handler function that updates `state` using React's built-in `setState()` method.
 
+2. Give the component (e.g. button) an `onClick()` event that calls the event handler function when triggered. This is done in-line using _camelCase_ notation.
 
+3. When the `state` is updated, React executes `render()` and the change will be visible in our UI.
+
+* You pass React events as a JSX expression using curly brackets, `{ }`, and the event handler function that will get called when the specified (e.g. `onClick`) event is triggered.
+
+* `state` is **never** modified directly! The only way React allows you to update a component's state is by using it's built-in `setState()` method. This is done inside the event handler functions.
 
