@@ -15,7 +15,7 @@ score={23}
 Function Component:
 ```jsx
 return (
-  //  JSX
+  // JSX
 );
 ```
 
