@@ -59,12 +59,6 @@ score={23}
 
 ___
 
-### Using `props` requires two steps:
-1. Define the `props` in a component's JSX tag (where it is being used).
-2. Enable the use of `props` in a component (define the `props` argument in the function component's definition).
-
-
-
 ### Props & State
 `props` pass data from a parent component to a child component.
 
@@ -75,6 +69,12 @@ ___
 For any data that will change we need to use `state`.
 
 The data in `state` is distributed through `props`.
+
+### Using `props` requires two steps:
+1. Define the `props` in a component's JSX tag (where it is being used).
+2. Enable the use of `props` in a component (define the `props` argument in the function component's definition).
+
+___
 
 ### Initialize state In A React Component
 **Constructor Syntax:**
