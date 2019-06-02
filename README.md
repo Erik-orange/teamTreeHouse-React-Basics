@@ -45,11 +45,19 @@ class MyComponent extends React.Component {
 **Note:**
 * React components return React elements.
 
+* React - The React top-level API.
+* React DOM - Adds DOM-specific methods.
+* Babel - A JavaScript compiler that lets us use ES6+ in older browsers.
+
 * Functional Components are also `state`-less functional componets.
 
 * Class Components are also `state`ful componets.
 
 * Use double quotes, `" "`, when writing `props` to mirror HTML attributes.
+
+* React elements are _immutable_.
+
+* Create-React-Application is a development server that uses WebPack to compile React, JSX, and ES6, and auto-prefixes CSS files.
 
 * Use curly brackets, `{ }`, when setting numeric values in `props`.
 ```jsx
