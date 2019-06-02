@@ -41,6 +41,7 @@ class MyComponent extends React.Component {
 * If `state` or `props` change, React executes the `render()` method to update what gets displayed to the user.
 
 .
+
 **Note:**
 * React components return React elements.
 
