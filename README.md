@@ -1,6 +1,46 @@
 # teamTreeHouse-React-Basics
 
 ___
+### Components
+Functional Component Definition:
+```jsx
+const MyComponent = (props) {
+  return (
+    // JSX
+  );
+}
+
+```
+
+Functional Component Definition with Implicit Return:
+```jsx
+{props.initPlayers.map( () = >
+  // JSX
+)}
+
+```
+
+Class Component Definition:
+```jsx
+class MyComponent extends React.Component {
+  // constructor() { ... }
+  
+  render() {
+    return (
+      // JSX
+    );
+  }
+}
+
+render() {
+  return (
+    // JSX
+  );
+}
+
+```
+
+* Functional Components are also `state`-less functional componets.
 
 * Use double quotes, `" "`, when writing `props` to mirror HTML attributes.
 
@@ -12,30 +52,12 @@ score={23}
 
 * React components return React elements.
 
-Function Component:
-```jsx
-return (
-  // JSX
-);
-```
-
-Class Component:
-```jsx
-render() {
-  return (
-    // JSX
-  );
-}
-```
+___
 
 ### Using `props` requires two steps:
 1. Define the `props` in a component's JSX tag (where it is being used).
 2. Enable the use of `props` in a component (define the `props` argument in the function component's definition).
 
-### Components
-Function Components **+** `props`
-
-Class Components **+** `state`
 
 
 ### Props & State
