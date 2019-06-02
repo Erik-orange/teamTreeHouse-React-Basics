@@ -100,6 +100,8 @@ class Counter extends React.Component {
 }  
 ```
 
+___
+
 ### Update A Component's state
 1. Write an event handler function that updates `state` using React's built-in `setState()` method.
 
@@ -111,9 +113,10 @@ class Counter extends React.Component {
 
 * `state` is **never** modified directly! The only way React allows you to update a component's state is by using it's built-in `setState()` method. This is done inside the event handler functions.
 
+___
 
 ### Binding the thisContext In React
-When you create a class component that extends from `React.Component`, any custom methods you create are not bound to the class component you just created. You must bind custom methods so that `this` refers to your newly created class component.
+* When you create a class component that extends from `React.Component`, any custom methods you create are not bound to the class component you just created. You must bind custom methods so that `this` refers to your newly created class component.
 
 There are several ways to accomplish this task:
 
@@ -169,8 +172,10 @@ class MyComponent extends React.Component {
 }
 ```
 
+___
+
 ### Change state Based On Previous state
-When updating `state` based on a previous `state`, do not rely on `this.state.statePropName` to calculate the next `state` because it may not be accurate.
+* When updating `state` based on a previous `state`, do not rely on `this.state.statePropName` to calculate the next `state` because it may not be accurate.
 
 **To Fix This Issue:**
 React's `setState()` method can also take a callback function as an argument instead of an object. This callback function can produce `state` based on a previous `state` in a more reliable form.
@@ -192,15 +197,15 @@ A change in `state` results in changes to the UI.
 Changes to the UI result in changes to the data.
 
 ### Remove Items From state
-To remove items from a `state` we'll initialize a `state` in the `<App />` component, then create and wire up an event handler that removes an item when an event is triggered, such as a click event.
+* To remove items from a `state` we'll initialize a `state` in the `<App />` component, then create and wire up an event handler that removes an item when an event is triggered, such as a click event.
 
-The component responsible for rendering the desired component will own and maintain that component's `state`. In this case, it's the `<App />` component.
+* The component responsible for rendering the desired component will own and maintain that component's `state`. In this case, it's the `<App />` component.
 
-That `state` will be then be passed down and available to the component as well as all children of `<App />` component via `props`.
+* That `state` will be then be passed down and available to the component as well as all children of `<App />` component via `props`.
 
-The `<App />` component **must** be a stateful component for all this to work!
+* The `<App />` component **must** be a stateful component for all this to work!
 
-To remove items from `state` wrie the removal function inside the parent component, our example `<App />`, and use the `setState()` method to update the `state` based on `prevState` with the `filter()` method.
+* To remove items from `state` wrie the removal function inside the parent component, our example `<App />`, and use the `setState()` method to update the `state` based on `prevState` with the `filter()` method.
 
 
 
