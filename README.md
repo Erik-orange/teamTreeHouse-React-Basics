@@ -196,6 +196,8 @@ eventHandlerFunc = () => {
 A change in `state` results in changes to the UI.
 Changes to the UI result in changes to the data.
 
+___
+
 ### Remove Items From state
 * To remove items from a `state` we'll initialize a `state` in the `<App />` component, then create and wire up an event handler that removes an item when an event is triggered, such as a click event.
 
