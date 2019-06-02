@@ -60,15 +60,15 @@ score={23}
 ___
 
 ### Props & State
-`props` pass data from a parent component to a child component.
+* `props` pass data from a parent component to a child component.
 
-`props` is an object, the data in `props` is "_Read-Only_".
+* `props` is an object, the data in `props` is "_Read-Only_".
 
-`state` is a regular JavaScript object with properties that define the pieces of data that change over time. Data in `state` is "_Read/Write_".
+* `state` is a regular JavaScript object with properties that define the pieces of data that change over time. Data in `state` is "_Read/Write_".
 
-For any data that will change we need to use `state`.
+* For any data that will change we need to use `state`.
 
-The data in `state` is distributed through `props`.
+* The data in `state` is distributed through `props`.
 
 ### Using `props` requires two steps:
 1. Define the `props` in a component's JSX tag (where it is being used).
