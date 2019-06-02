@@ -39,9 +39,13 @@ Class Components **+** `state`
 
 
 ### Props & State
+`props` pass data from a parent component to a child component.
+
 `props` is an object. Data in `props` is "_Read-Only_".
 
 `state` is a regular JavaScript object with properties that define the pieces of data that change over time. Data in `state` is "_Read/Write_".
+
+For any data that will change we need to use `state`.
 
 The data in `state` is distributed through `props`.
 
