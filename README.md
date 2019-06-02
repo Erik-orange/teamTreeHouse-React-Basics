@@ -27,20 +27,25 @@ class MyComponent extends React.Component {
   
   render() {
     return (
-      // JSX
+      // JSX   {this.props.propName}
+      // JSX   {this.state.stateName}
     );
   }
 }
 
-render() {
-  return (
-    // JSX
-  );
-}
-
 ```
+* In `constructor()` we define the initial `state` that the component will render to (mount).
+
+* The `render()` function in a class component is a function of both `props` and `state`.
+
+* If `state` or `props` change, React executes the `render()` method to update what gets displayed to the user.
+
+**Note:**
+* React components return React elements.
 
 * Functional Components are also `state`-less functional componets.
+
+* Class Components are also `state`ful componets.
 
 * Use double quotes, `" "`, when writing `props` to mirror HTML attributes.
 
@@ -49,8 +54,6 @@ render() {
 // Example
 score={23}
 ```
-
-* React components return React elements.
 
 ___
 
