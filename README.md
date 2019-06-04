@@ -68,6 +68,7 @@ score={23}
 ___
 
 ### Props & State
+
 * `props` pass data from a parent component to a child component.
 
 * `props` is an object, the data in `props` is "_Read-Only_".
@@ -84,15 +85,19 @@ ___
   ```
 
 #### Default props
+
 ```jsx
 MyComponent.defaultProps = {userName: "John"};
 ```
 
 #### Using props requires two steps:
+
 1. Define the `props` in a component's JSX tag (where it is being used).
 2. Enable the use of `props` in a component (define the `props` argument in the function component's definition).
 
+
 #### Type-Checking With PropTypes
+
 ```jsx
 // GENERAL FORMAT
 ComponentName.propTypes = {propName: PropTypes.propType.isRequired};
