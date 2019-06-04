@@ -78,10 +78,30 @@ ___
 
 * The data in `state` is distributed through `props`.
 
-### Using `props` requires two steps:
+* To access `props` within a Class component, you use the `this` keyword.
+  ```jsx
+  {this.props.myPropName}
+  ```
+
+#### Default props
+```jsx
+MyComponent.defaultProps = {userName: "John"};
+```
+
+#### Using props requires two steps:
 1. Define the `props` in a component's JSX tag (where it is being used).
 2. Enable the use of `props` in a component (define the `props` argument in the function component's definition).
 
+#### Type-Checking With PropTypes
+```jsx
+// GENERAL FORMAT
+ComponentName.propTypes = {propName: PropTypes.propType.isRequired};
+```
+
+```jsx
+MyComponent.propTypes = {handleClick: PropTypes.func.isRequired};
+MyComponent.propTypes = {userName: PropTypes.string.isRequired};
+```
 ___
 
 ### Initialize state In A React Component
