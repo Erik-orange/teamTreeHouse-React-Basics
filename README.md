@@ -84,6 +84,8 @@ ___
   ```jsx
   {this.props.myPropName}
   ```
+  
+* You can also pass handler functions, or any method that's defined on a React component, to other child components. This is how you allow child components to interact with their parent components. You pass methods to child components just like any other `props`.
 
 #### Default props
 
