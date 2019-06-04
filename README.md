@@ -112,6 +112,7 @@ MyComponent.propTypes = {userName: PropTypes.string.isRequired};
 ___
 
 ## Initialize state In A React Component
+
 **Constructor Syntax:**
 ```jsx
 class Counter extends React.Component {
@@ -138,6 +139,15 @@ class Counter extends React.Component {
 ___
 
 ## Update A Component's state
+
+Call `setState()` within your component class passing it an object with key-value pairs. The keys are your `state` properties and the values are the updated `state` data.
+```jsx
+this.setState({
+  name: "Erik",
+  age: 20
+});
+```
+
 1. Write an event handler function that updates `state` using React's built-in `setState()` method.
 
 2. Give the component (e.g. button) an `onClick()` event that calls the event handler function when triggered. This is done in-line using _camelCase_ notation.
