@@ -63,19 +63,19 @@ class MyComponent extends React.Component {
 
 
 > \[!NOTE]
-* React components return React elements.
-* `React` - The ReactJS top-level API.
-* `React DOM` - Adds DOM-specific methods.
-* `Babel` - A JavaScript compiler that lets us use ES6+ in older browsers.
-* Functional Components are also `state`-_less_ functional componets.
-* Class Components are also `state`-_ful_ componets.
-* Use double quotes, `" "`, when writing `props` to mirror `HTML` attributes.
-* React `elements` are _`immutable`_.
-* `Create-React-Application` is a development server that uses WebPack to compile `React`, `JSX`, and `ES6`, and auto-prefixes `CSS` files.
-* Use curly brackets, `{ }`, when setting numeric values in `props`.
-```jsx
-score={23}
-```
+> * React Components return React `elements`.
+> * `React` - The ReactJS top-level API.
+> * `React DOM` - Adds `DOM`-specific methods.
+> * `Babel` - A JavaScript compiler that lets us use `ES6+` in older browsers.
+> * Traditional Functional Components (before `Hooks`) are also `state`-_less_ componets.
+> * Class Components are also `state`-_ful_ componets.
+> * Use double quotes, `" "`, when writing `props` to mirror `HTML` attributes.
+> * React `elements` are _`immutable`_.
+> * `Create-React-Application` is a development server that uses WebPack to compile `React`, `JSX`, and `ES6`, and auto-prefixes `CSS` files.
+> * Use curly brackets, `{ }`, when setting numeric values in `props`.
+> ```jsx
+>    score={23}
+> ```
 
 
 ## Props & State
