@@ -16,7 +16,7 @@ const MyComponent = (props) => {
 
 #### Inline `prop` Operations w/o Explict `return` Statement
 ```jsx
-{props.initPlayers.map( () = >
+{props.initPlayers.map(p =>
     // JSX
 )}
 ```
