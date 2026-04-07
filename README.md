@@ -14,12 +14,11 @@ const MyComponent = (props) => {
 }
 ```
 
-### Functional Component Definition w/o Explict `return` Statement
+#### Inline `prop` Operations w/o Explict `return` Statement
 ```jsx
 {props.initPlayers.map( () = >
     // JSX
 )}
-
 ```
 
 ### Class Component Definition
